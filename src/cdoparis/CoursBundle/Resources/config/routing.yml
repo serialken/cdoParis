@@ -1,0 +1,3 @@
+cdoparis_cours_homepage:
+    path:     /
+    defaults: { _controller: cdoparisCoursBundle:Default:index }

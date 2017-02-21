@@ -1,0 +1,7 @@
+cdoparis_cours:
+    resource: "@cdoparisCoursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
