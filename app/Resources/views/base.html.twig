@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <title>{% block title %}{% endblock %} - Capoeira CDO Paris</title>
+            {% block stylesheets %} {% endblock %}
+            <link rel="icon" type="image/x-icon" href="{{ asset('cdo_paris_site_icon.png') }}" />
+
+        </head>
+        <body>
+                {% block body %}{% endblock %}
+                {% block footer %}Copyright 2017 by NagO.{% endblock %}
+                {% block javascripts %}{% endblock %}
+
+        </body>
 </html>

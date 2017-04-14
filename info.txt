@@ -1,0 +1,3 @@
+en local lancer le serveur:
+
+- php bin/console server:run

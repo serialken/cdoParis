@@ -1,0 +1,12 @@
+#content{
+    height: 500px;
+    width: 100%;
+    background-image: url("../img/CapoeiraDeOuro_01.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#cotedroit{
+    background-color: #000000;
+}

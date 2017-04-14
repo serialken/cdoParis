@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Homepage{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+    <h1>Index</h1>
+
+    <div class="container-fluid">
+        <div id="content" class="col-md-12">
+            welcome to cdo paris home page !!!!!!!!
+            {#{% image '@AppBundle/Resources/public/images/example.jpg' %}#}
+                {#<img src="{{ asset_url }}" alt="Example" />#}
+            {#{% endimage %}#}
+        </div>
+    </div>
+
+    <div id="cotedroit" class="col-md-3"></div>
+
+{% endblock %}

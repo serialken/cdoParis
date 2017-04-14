@@ -1,4 +1,0 @@
-services:
-#    cdoparis_cours.example:
-#        class: cdoparis\CoursBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
