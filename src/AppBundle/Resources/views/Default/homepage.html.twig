@@ -9,17 +9,21 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Index</h1>
+    <div id="haut">
+        <h1 id="site-title">Capoeira CDO PARIS</h1>
+        <h2 id="site-description">Bienvenue chez Capoeira Cordão De Ouro Paris !</h2>
+    </div>
 
+    {{ wo_render_breadcrumbs() }}
     <div class="container-fluid">
         <div id="content" class="col-md-12">
-            welcome to cdo paris home page !!!!!!!!
-            {#{% image '@AppBundle/Resources/public/images/example.jpg' %}#}
-                {#<img src="{{ asset_url }}" alt="Example" />#}
-            {#{% endimage %}#}
+            Accueil
+            {% image '@AppBundle/Resources/public/img/Picto_Chicote.jpg' %}
+                <img src="{{ asset_url }}" alt="Example" />
+            {% endimage %}
         </div>
     </div>
 
-    <div id="cotedroit" class="col-md-3"></div>
+
 
 {% endblock %}

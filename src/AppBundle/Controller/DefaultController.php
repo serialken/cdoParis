@@ -13,6 +13,10 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        // test de l'utilisation du fil d'ariane
+        $breadcrumbs =  $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem("home",$this->get("router")->generate("homepage"));
+
         // replace this example code with whatever you need
         return $this->render('AppBundle:Default:homepage.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,

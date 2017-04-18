@@ -1,12 +1,27 @@
 #content{
     height: 500px;
     width: 100%;
-    background-image: url("../../bundles/app/img/CapoeiraDeOuro_01.jpg") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: transparent;
+    /*background-image: url("../img/CapoeiraDeOuro_01.jpg") ;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
 }
 
-#cotedroit{
-    background-color: #000000;
+#haut{
+    background-image: url("../../bundles/app/img/CapoeiraDeOuro_01.jpg") ;
+}
+
+#site-title{
+    font-size: 64px;
+    /*line-height: normal;*/
+    /*text-shadow: #970f00;*/
+    text-align: center;
+    color: #0000F0;
+}
+
+#site-description{
+    font-size: 32px;
+    text-align: center;
+    color: #0000F0;
 }
