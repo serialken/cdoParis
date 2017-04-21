@@ -9,7 +9,10 @@
 }
 
 #haut{
-    background-image: url("../../bundles/app/img/CapoeiraDeOuro_01.jpg") ;
+    /*background-image: url("../img/CapoeiraDeOuro_01.jpg") ;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #site-title{

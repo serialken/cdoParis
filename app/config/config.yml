@@ -107,3 +107,11 @@ white_october_breadcrumbs:
     locale:             ~ # defaults to null, so the default locale is used
     translation_domain: ~ # defaults to null, so the default domain is used
     viewTemplate:       'WhiteOctoberBreadcrumbsBundle::breadcrumbs.html.twig'
+
+
+stof_doctrine_extensions:
+    default_locale: fr_FR
+    orm:
+        default:
+            tree: true
+            timestampable: true

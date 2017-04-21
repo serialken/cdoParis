@@ -1,16 +1,41 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
+<html lang="fr">
         <head>
-            <meta charset="UTF-8" />
-            <title>{% block title %}{% endblock %} - Capoeira CDO Paris</title>
-            {% block stylesheets %} {% endblock %}
-            <link rel="icon" type="image/x-icon" href="{{ asset('cdo_paris_site_icon.png') }}" />
+            {% block metadata %}
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" >
+                <meta name="description" content="Site Web du groupe Cordão De Ouro Paris - Mestre Chicote" >
+            {% endblock %}
 
+            <title>{% block title %}{% endblock %} - Capoeira CDO Paris</title>
+
+            {% block stylesheets %}
+                <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+                <link rel="icon" type="image/x-icon" href="{{ asset('cdo_paris_site_icon.png') }}" />
+                {% stylesheets  filter='cssrewrite' 'css/bootstrap.css' %}{% endstylesheets %}
+            {% endblock %}
         </head>
         <body>
-                {% block body %}{% endblock %}
-                {% block footer %}Copyright 2017 by NagO.{% endblock %}
-                {% block javascripts %}{% endblock %}
+            <header>
+                {% block header %}
+                    <div class="container-fluid" id="haut">
+                        <h1 id="site-title">Capoeira CDO PARIS</h1>
+                        <h2 id="site-description">Bienvenue chez Capoeira Cordão De Ouro Paris !</h2>
+                    </div>
+                {% endblock %}
+            </header>
 
+            {% block content %}
+            {% endblock %}
+
+            <footer>
+                {% block footer %}Copyright 2017 by NagO.{% endblock %}
+            </footer>
         </body>
+        {% block javascripts %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        {% endblock %}
+
+
 </html>

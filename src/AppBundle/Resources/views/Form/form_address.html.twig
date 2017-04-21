@@ -1,0 +1,55 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Adding Address{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets  filter='cssrewrite'
+        '@AppBundle/Resources/public/css/style.css'
+        '@AppBundle/Resources/public/css/formulaire.css' %}
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+    <div>
+        {{ wo_render_breadcrumbs() }}
+    </div>
+    <div class="container-fluid" id="containerFullWidth">
+        {% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="alert alert-success text-center" role="alert">{{ flashMessage | upper }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="container" id="myContainer">
+        <div class="row">
+            {{ form_start(form) }}
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                {#Title#}
+                {{ form_label(form.title, "Titre de l\'adresse*") }}
+                {{ form_errors(form.title) }}
+                {{ form_widget(form.title, {'attr': {'class': 'my-form-control','type':'text','placeholder':'Titre'}}) }}
+                {#place#}
+                {{ form_label(form.place, "Adresse*") }}
+                {{ form_errors(form.place) }}
+                {{ form_widget(form.place, {'attr': {'class': 'my-form-control','type':'text','placeholder':'Ex: 39, rue le Marois'}}) }}
+                {#cp#}
+                {{ form_label(form.cp, "CP*") }}
+                {{ form_errors(form.cp) }}
+                {{ form_widget(form.cp, {'attr': {'class': 'my-form-control','type':'text','placeholder':'Ex: 75016'}}) }}
+                {#city#}
+                {{ form_label(form.city, "Ville*") }}
+                {{ form_errors(form.city) }}
+                {{ form_widget(form.city, {'attr': {'class': 'my-form-control','type':'text','placeholder':'Ex: Paris'}}) }}
+                {#informations#}
+                {{ form_label(form.informations, "Informations*") }}
+                {{ form_errors(form.informations) }}
+                {{ form_widget(form.informations, {'attr': {'class': 'my-form-control','type':'text','placeholder':'Ex: L9 Porte de saint-Cloud'}}) }}
+            </div>
+            <div>
+                {{ form_widget(form.save) }}
+            </div>
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
+        </div>
+        <p>*Tous les champs sont obligatoires. </p>
+    </div>
+{% endblock content %}
